@@ -365,7 +365,39 @@ nav {
 
 /* section telechargement */
 .button-telechargement{
-    width: 15%;
+    width: 30%;
+}
+
+.div-telecharger{
+    border-radius: 10px;
+    box-shadow: 0 4px 15px #00000021;
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0 0 40px;
+    justify-content: space-between;
+}
+
+.img-telechargement {
+    max-width: 35%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0 0 10px 0;
+}
+
+.div-download{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+/* section footer */
+.sec-footer{
+    background-color: var(--color-12);
+    color: var(--light-color);
+    display: flex;
+    justify-content: center;
 }
 
 
