@@ -1,57 +1,65 @@
 /* Reinitialisation */
-*{
+* {
     margin: 0;
     border: 0cap;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-    border: solid green 1px;
 }
+
 /* Variables */
-:root{
-    --light-color:#f7fffb;
-    --dark-color:#0c291b;
-    --primary-color:#30A46C;
+:root {
+    --light-color: #f7fffb;
+    --dark-color: #0c291b;
+    --primary-color: #30A46C;
 }
 
 /* Style global */
-body{
+body {
     color: var(--dark-color);
     background-color: var(--light-color);
     font-size: 18px;
     font-family: "Inter", sans-serif;
 }
-h1, h2{
+
+h1, h2 {
     font-family: "Aleo", serif;
     font-weight: 700;
     line-height: 1.2;
 }
-h1{
-    font-size: 75px;
 
+h1 {
+    font-size: 75px;
 }
-h2{
+
+h2 {
     font-size: 47px;
 }
-h3{
+
+h3 {
     font-size: 29px;
+    color: var(--primary-color);
 }
-p{
+
+p {
     font-size: 18px;
 }
-img{
+
+img {
     max-width: 100%;
     height: auto;
 }
-a{
+
+a {
     color: inherit;
 }
 
 /* Boites */
-section{
+section {
     padding: 64px 0;
 }
-.container{
+
+.container {
     width: 900px;
     margin: auto;
     padding: 50px 0 50px 0;
@@ -59,55 +67,74 @@ section{
 
 
 /* section header */
-.div-nav{
+.div-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.img-logo{
+    width: 8%;
+}
+
+nav {
+    padding: 20px;
+}
+
+.lien {
+    padding-right: 20px;
 }
 
 
 /* section hero */
-.hero{
+.hero {
     display: flex;
     flex-direction: row;
     height: 100vh;
     margin: auto;
 }
-.div-hero{
+
+.div-hero {
     width: 500px;
-    padding: 70px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
-.titre{
+
+.titre {
     font-size: 75px;
 }
-.div-button{
+
+.div-button {
     display: flex;
     gap: 20px;
 }
-.button{
+
+.button {
     background-color: var(--primary-color);
     color: var(--light-color);
     padding: 10px;
     border-radius: 10px;
 }
-.button-blanc{
+
+.button-blanc {
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     padding: 10px;
     border-radius: 10px;
 }
-.img-hero{
-    max-width: 50%;
+
+.img-hero {
+    max-width: 55%;
     height: auto;
     object-fit: contain;
 }
 
 
 /* section problematique */
-#problematique{
+#problematique {
     background-color: var(--primary-color);
     color: var(--light-color);
     height: 350px;
@@ -118,48 +145,91 @@ section{
 }
 
 #preuve {
-  background: #30A46C;
-  padding: 32px;
-  font-family: sans-serif;
+    background: #30A46C;
+    padding: 32px;
+    font-family: sans-serif;
 }
 
-#preuve h2 { color: white; font-weight: 400; margin: 0 0 24px; }
+#preuve h2 {
+    color: white;
+    font-weight: 400;
+    margin: 0 0 24px;
+}
 
 .display-cards {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 .card {
-  background: white;
-  border-radius: 10px;
-  padding: 16px;
-  flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    flex: 1;
 }
 
 .card-large {
-  background: white;
-  border-radius: 10px;
-  padding: 16px;
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
 }
 
-.valeur { font-size: 20px; font-weight: 600; margin: 0; }
-.label { font-size: 13px; color: #555; margin: 4px 0 0; }
+.valeur {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.label {
+    font-size: 13px;
+    color: #555;
+    margin: 4px 0 0;
+}
 
 
-/* section solution */ 
-#solutions{
+/* section solution */
+#solutions {
     height: 100vh;
-}
-
-.img-card{
-    height: 30vh;
-}
-
-.div-card-solution{
-    display: flex;
+    border: solid green 1px;
     
+    h3{
+        padding-top: 37px
+    }
+
+    p{
+        padding-top: 20px;
+        
+    }
 }
 
+#solutions * {
 
+    border: solid green 1px;
+}
+
+.img-card {
+    height: 44vh;
+}
+
+.div-solution {
+    display: flex;
+    height: 58vh;
+    gap: 66px;
+    justify-content: center;
+    height: 73vh;
+}
+
+.div-card-solution {
+
+    display: flex;
+    flex-direction: column;
+    width: 55vh;
+    align-items: center;
+    padding-top: 49px;
+    height: 72vh;
+
+    p{
+        text-align: center;
+    }
+}
