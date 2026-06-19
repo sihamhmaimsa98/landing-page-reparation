@@ -91,13 +91,11 @@ a {
 
 /* cards */
 .card-container {
-    /* width: 50%; */
     display: flex;
     gap: 37px;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 46px;
-    /* min-height: 73vh; */
 }
 
 #engagement .card-container {
@@ -259,42 +257,6 @@ nav {
 }
 
 
-/* section preuve */
-/* #preuve {
-    /* background: #30A46C; */
-/* padding: 32px; */
-/* font-family: sans-serif; */
-
-
-/* #preuve h2 {
-    /* color: white;
-    font-weight: 400;
-    margin: 0 0 24px; */
-
-
-/* .display-cards {
-    /* display: flex;
-    gap: 12px;
-    margin-bottom: 12px; */
-
-
-/* .valeur {
-    font-size: 30px;
-    font-weight: 600;
-    margin: 0;
-} */
-
-/* .p-preuve {
-    /* font-size: 13px;
-    color: #555;
-    margin: 4px 0 0; */
-
-
-/* .img-preuve {
-    height: 7rem;
-} */
-
-
 /* Section partenaire */
 .div-partenaire {
     display: flex;
@@ -419,6 +381,7 @@ input{
     height: 26px;
 
 }
+
 label{
     font-weight: bold;
 }
@@ -434,7 +397,6 @@ button{
     color: white;
     letter-spacing: 1px;
     border-radius: 4px;
-
 }
 
 .p-footer{
@@ -447,7 +409,6 @@ button{
     
 }
 
-
 .contact{
     display: flex;
     gap: 4px;
@@ -455,9 +416,12 @@ button{
     margin: 20px;
     font-size: 15px;
 }
+
 .contact p {
     font-size: 15px;
 }
+
+
 
 /* page documentation css */
 
