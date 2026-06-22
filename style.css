@@ -61,10 +61,10 @@ p {
   line-height: 1.5;
 }
 
-img {
+/* img {
   width : 100px;
   height: auto;
-}
+} */
 
 a {
   color: inherit;
@@ -362,7 +362,7 @@ nav {
   color: var(--light-color);
   display: flex;
   justify-content: center;
-  min-height: 57vh;
+  min-height: 27vh;
   text-align: center;
   line-height: 7rem;
 }
