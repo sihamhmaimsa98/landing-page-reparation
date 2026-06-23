@@ -109,6 +109,7 @@ a {
 
 .card {
   background: white;
+  color: var(--dark-color);
   border-radius: 10px;
   padding: 16px;
   flex: 1;
@@ -124,21 +125,26 @@ a {
 #preuve .card-container {
   color: var(--color-12);
   gap: 17px;
+
   .card {
     flex-direction: row;
     flex: 1 1 320px;
     text-align: left;
+
     img {
       height: 80px;
     }
+
     .valeur {
       display: flex;
       gap: 12px;
+
       img {
         height: 24px;
       }
     }
   }
+
   .large {
     flex: 1 1 100%;
     justify-content: center;
@@ -192,6 +198,7 @@ a {
   margin-left: 30px;
   margin-right: 32px;
 }
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -207,7 +214,7 @@ nav {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: .02em;
-  
+
 }
 
 /* section hero */
@@ -218,6 +225,7 @@ nav {
   margin: auto;
   justify-content: center;
   background: linear-gradient(356deg, #d6dcda8c, #f0f0f07a 18%, #ffffff);
+
   .container {
     flex-direction: row;
     text-align: left;
@@ -226,7 +234,7 @@ nav {
 }
 
 .div-hero {
-  width: 49%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,7 +245,7 @@ nav {
 }
 
 .img-hero {
-  max-width: 36%;
+  max-width: 30%;
   height: auto;
   object-fit: contain;
 }
@@ -272,6 +280,13 @@ nav {
 }
 
 /* Section partenaire */
+
+#defilement-partenaires{
+
+  display: flex;
+      gap: 35px;
+
+}
 .div-partenaire {
   display: flex;
   flex-direction: column;
@@ -287,7 +302,21 @@ nav {
 }
 
 .img-partenaire {
-  height: 192px;
+  height: 65px;
+}
+
+.card-partenaire {
+  background-color: white;
+}
+
+.texte-partenaire {
+
+  font-size: 11px;
+  color: #30a46c;
+  font-weight: 500;
+  background: #e6f6eb;
+  padding: 2px 8px;
+  border-radius: 4px;
 }
 
 /* section engagement */
@@ -355,9 +384,16 @@ nav {
 .div-download {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: start;
   gap: 15px;
 }
+
+
+
+
+/* Section partenaires */
+
+
 
 /* section footer */
 .sec-footer {
@@ -369,6 +405,7 @@ nav {
   text-align: center;
   line-height: 7rem;
 }
+
 .div-form {
   display: flex;
   justify-content: center;
@@ -437,6 +474,7 @@ button {
   align-items: center;
   justify-content: left;
   background: linear-gradient(355deg, #d6dcda8c, #f0f0f07a 18%, #ffffff);
+
   .container {
     align-items: start;
   }
@@ -467,25 +505,27 @@ button {
 .div-cible-title {
   display: flex;
   justify-content: center;
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 
 }
 
 .div-persona {
-      display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;    
-    margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 80px;
 }
+
 .content-persona {
-    width: 40%;
+  width: 40%;
 }
+
 .div-persona img {
-      width: 300px;
-    aspect-ratio: 3.5 / 4.5;
-    object-fit: cover;
+  width: 300px;
+  aspect-ratio: 3.5 / 4.5;
+  object-fit: cover;
 }
 
 .div-preuve {
@@ -494,9 +534,11 @@ button {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.div-preuve img{
+
+.div-preuve img {
   width: 60%;
 }
+
 .technologie-title-div {
   display: flex;
   justify-content: center;
@@ -541,9 +583,12 @@ button {
   background: white;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  width: 1400px
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
+
+/* prototype-etape-column{
+
+} */
 
 .prototype-etape:hover .etape-image {
   transform: scale(2);
@@ -554,6 +599,7 @@ button {
   transform: scale(1.2);
   transition: transform 0.4s ease;
 }
+
 .etape {
   display: flex;
   gap: 24px;
@@ -589,11 +635,13 @@ button {
   line-height: 1.6;
   color: var(--dark-color);
 }
+
 .fade-in {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
@@ -602,41 +650,53 @@ button {
 .img-hero {
   animation: float 3s ease-in-out infinite;
 }
+
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-14px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
 }
 
 .button {
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(48,164,108,0.35);
+  box-shadow: 0 6px 18px rgba(48, 164, 108, 0.35);
 }
+
 .button.secondary:hover {
-  background: rgba(48,164,108,0.07);
+  background: rgba(48, 164, 108, 0.07);
 }
 
 .card {
   transition: transform 0.25s, box-shadow 0.25s;
 }
+
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .lien {
   position: relative;
 }
+
 .lien:after {
   content: '';
   position: absolute;
   bottom: -2px;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   height: 1px;
   background: currentColor;
   transform: scaleX(0);
   transition: transform 0.2s;
 }
-.lien:hover::after { transform: scaleX(20); }

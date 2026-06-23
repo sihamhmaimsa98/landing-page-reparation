@@ -10,24 +10,33 @@ function compter(titre, chiffreFinal, signe, mesure) {
       clearInterval(intervalle);
     }
     titre.textContent = signe + chiffreDepare.toLocaleString('fr-FR') + mesure;
-  }, 10);
+  }, 30);
 }
  
-const sectionPreuve = document.getElementById("partenaires");
- 
+
 compter(titres[0], 500,    '-', ' T');
 compter(titres[1], 200000, '-', ' kg');
 compter(titres[2], 158000, '',  '');
 compter(titres[3], 204,    '',  ' Magasins agréés');
- 
+
+
+//  Partenaire qui defile
+
+const sectionPartenaire = document.getElementById("partenaires");
+let divPartenaires = document.getElementById("defilement-partenaires");
+
 const partenaires = [
-  { logo: "./assets/section-partenaires/emmausImg.svg",    nom: "Back Market",  tag: "Reconditionné" },
-  { logo: "./assets/section-partenaires/fairephoneImg.svg", nom: "Fairphone",    tag: "Éco-responsable" },
-  { logo: "./assets/section-partenaires/ifixitImg.svg",    nom: "Emmaüs",       tag: "Don & réemploi" },
-  { logo: "./assets/section-partenaires/loremImg.svg",     nom: "iFixit",       tag: "Réparation" },
-  { logo: "./assets/section-partenaires/tmblLogo.svg",     nom: "LCDCycle",     tag: "Pièces détachées" },
+  { logo: "./assets/section-partenaires/logoBlackMarket.png",  nom: "Back Market",  tag: "Reconditionné." },
+  { logo: "./assets/section-partenaires/Fairphone-Symbol.png", nom: "Fairphone",    tag: "Éco-responsable." },
+  { logo: "./assets/section-partenaires/emmausImg.svg",        nom: "Emmaüs",       tag: "Don & réemploi." },
+  { logo: "./assets/section-partenaires/iFixitLogo.webp",      nom: "iFixit",       tag: "Réparation." },
+  { logo: "./assets/section-partenaires/recommenceLogo.png",   nom: "Recommence",   tag: "Reconditionné." },
+   { logo: "./assets/section-partenaires/bricoPhoneLogo.jpg",   nom: "Brico Phone",   tag: "Piéces détachés." },
 ];
  
+
+
+
 function creerCard(partenaire) {
   const card = document.createElement('div');
   card.classList.add('card-partenaire');
@@ -43,19 +52,36 @@ function creerCard(partenaire) {
  
   let texte = document.createElement('p');
   texte.textContent = partenaire.tag;
+  texte.classList.add(`texte-partenaire`);
  
   boite.appendChild(titre);
   boite.appendChild(texte);
   card.appendChild(img);
   card.appendChild(boite);
+
+ 
  
   return card;
 }
  
 for (let i = 0; i < partenaires.length; i++) {
-  sectionPreuve.appendChild(creerCard(partenaires[i]));
+  divPartenaires.appendChild(creerCard(partenaires[i]));
 }
 
 
 
- 
+ // CARROUSEL PARTENAIRES
+const track = document.querySelector('#defilement-partenaires');
+let position = 0;
+
+function deplacerCarrousel() {
+  position -= 1;
+  const largeurTotale = track.scrollWidth;
+  if (Math.abs(position) >= largeurTotale) {
+    position = 0;
+  }
+  track.style.transform = 'translateX(' + position + 'px)';
+  requestAnimationFrame(deplacerCarrousel);
+}
+
+deplacerCarrousel();
