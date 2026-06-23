@@ -83,7 +83,6 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 16px;
 }
 
 .bg-green {
@@ -204,7 +203,10 @@ nav {
 
 .lien {
   padding-right: 20px;
-  color:#193b2d;
+  color: #193b2d;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .02em;
   
 }
 
@@ -219,6 +221,7 @@ nav {
   .container {
     flex-direction: row;
     text-align: left;
+    gap: 10vw;
   }
 }
 
@@ -234,7 +237,7 @@ nav {
 }
 
 .img-hero {
-  max-width: 51%;
+  max-width: 36%;
   height: auto;
   object-fit: contain;
 }
@@ -425,9 +428,7 @@ button {
   font-size: 15px;
 }
 
-/* page documentation css */
-
-/* section introduction*/
+/* ZALJESEVAGIC CSS  */
 .introduction {
   display: flex;
   flex-direction: row;
@@ -452,7 +453,6 @@ button {
   justify-content: left;
 }
 
-/* section cible */
 #cible {
   height: 80vh;
 }
@@ -476,14 +476,15 @@ button {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 32px;    
+    margin-bottom: 80px;
 }
 .content-persona {
     width: 40%;
 }
 .div-persona img {
-      width: 28%;
-    aspect-ratio: 2 / 3;
+      width: 300px;
+    aspect-ratio: 3.5 / 4.5;
     object-fit: cover;
 }
 
@@ -496,7 +497,6 @@ button {
 .div-preuve img{
   width: 60%;
 }
-/* Section technologies */
 .technologie-title-div {
   display: flex;
   justify-content: center;
@@ -511,7 +511,132 @@ button {
   margin: 10px 0px 10px 0px;
 }
 
-/* section prototype */
+
 .prototype-div {
   padding-left: 12%;
 }
+
+#preuve .container {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.prototype-section {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.prototype-image {
+  width: 20vw;
+}
+
+.prototype-etape {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  JUSTIFY-CONTENT: space-evenly;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  width: 1400px
+}
+
+.prototype-etape:hover .etape-image {
+  transform: scale(2);
+}
+
+.etape-image {
+  width: 15vw;
+  transform: scale(1.2);
+  transition: transform 0.4s ease;
+}
+.etape {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin: 70px 0 50px 0;
+  height: 170px;
+}
+
+.etape-nombre {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  min-width: 50px;
+}
+
+.etape-content h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 19px;
+  color: var(--primary-color);
+}
+
+.etape-content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-color);
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-hero {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+.button {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(48,164,108,0.35);
+}
+.button.secondary:hover {
+  background: rgba(48,164,108,0.07);
+}
+
+.card {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.lien {
+  position: relative;
+}
+.lien:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0; right: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+.lien:hover::after { transform: scaleX(20); }
