@@ -13,13 +13,20 @@ function compter(titre, chiffreFinal, signe, mesure) {
   }, 30);
 }
  
+const sectionPreuve = document.getElementById('preuve');
 
-compter(titres[0], 500,    '-', ' T');
-compter(titres[1], 200000, '-', ' kg');
-compter(titres[2], 158000, '',  '');
-compter(titres[3], 204,    '',  ' Magasins agréés');
+const observateur = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      compter(titres[0], 500,    '-', ' T');
+      compter(titres[1], 200000, '-', ' kg');
+      compter(titres[2], 158000, '',  '');
+      compter(titres[3], 204,    '',  ' Magasins agréés');
+    }
+  });
+});                        // ← il manquait cette ligne
 
-
+observateur.observe(sectionPreuve);   // ← et celle-ci aussi
 //  Partenaire qui defile
 
 const sectionPartenaire = document.getElementById("partenaires");
@@ -68,20 +75,42 @@ for (let i = 0; i < partenaires.length; i++) {
   divPartenaires.appendChild(creerCard(partenaires[i]));
 }
 
+for (let i = 0; i < partenaires.length; i++) {
+  divPartenaires.appendChild(creerCard(partenaires[i]));
+}
+
 
 
  // CARROUSEL PARTENAIRES
-const track = document.querySelector('#defilement-partenaires');
+// const track = document.querySelector('#defilement-partenaires');
 let position = 0;
 
 function deplacerCarrousel() {
   position -= 1;
-  const largeurTotale = track.scrollWidth;
+
+  const gap = 35;
+  const largeurTotale = divPartenaires.scrollWidth  / 2 + gap / 2;
   if (Math.abs(position) >= largeurTotale) {
     position = 0;
   }
-  track.style.transform = 'translateX(' + position + 'px)';
+  divPartenaires.style.transform = 'translateX(' + position + 'px)';
   requestAnimationFrame(deplacerCarrousel);
 }
 
 deplacerCarrousel();
+
+const toutesLesSections = document.querySelectorAll('.section-cacher');
+
+const observateurSections = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('section-visible');
+    } else {
+      entry.target.classList.remove('section-visible'); 
+    }
+  });
+});
+
+toutesLesSections.forEach(function(section) {
+  observateurSections.observe(section);
+});
