@@ -25,9 +25,9 @@ const observateur = new IntersectionObserver(function (entries) {
       compter(titres[3], 204, '', ' Magasins agrées');
     }
   });
-});                        // ← il manquait cette ligne
+});                        
 
-observateur.observe(sectionPreuve);   // ← et celle-ci aussi
+observateur.observe(sectionPreuve);   
 // //  Partenaire qui defile
 
 

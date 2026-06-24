@@ -72,11 +72,6 @@ p {
   line-height: 1.5;
 }
 
-/* img {
-  width : 100px;
-  height: auto;
-} */
-
 a {
   color: inherit;
 }
@@ -290,10 +285,8 @@ nav {
   margin: 1rem 0 3rem;
 }
 
+
 /* Section partenaire */
-
-
-
 .div-partenaire {
   display: flex;
   flex-direction: column;
@@ -301,13 +294,11 @@ nav {
   gap: 2rem;
 }
 
-
 .fenetre-partenaires {
   overflow: hidden;
   width: 90%;
   margin: 0 auto;
 }
-
 
 #defilement-partenaires {
   display: flex;
@@ -346,6 +337,7 @@ nav {
   border-radius: 4px;
   margin: 4px 0 0 0;
 }
+
 
 /* section engagement */
 .div-card-engagement {
@@ -387,6 +379,7 @@ nav {
   font-size: 15px;
 }
 
+
 /* section telechargement */
 .button-telechargement {
   width: 30%;
@@ -415,12 +408,6 @@ nav {
   align-items: start;
   gap: 15px;
 }
-
-
-
-
-/* Section partenaires */
-
 
 
 /* section footer */
@@ -492,6 +479,7 @@ button {
 .contact p {
   font-size: 15px;
 }
+
 
 /* ZALJESEVAGIC CSS  */
 .introduction {
@@ -616,8 +604,6 @@ button {
   margin-bottom: 40px;
 }
 
-
-
 .prototype-etape:hover .etape-image {
   scale: 3 3 1;
   opacity: 1;
@@ -738,6 +724,7 @@ button {
   transition: transform 0.2s;
 }
 
+
 /* Section références */
 .div-references {
   display: flex;
@@ -806,7 +793,6 @@ button {
 
 
 /* section evolution */
-
 #evolutions .container {
   align-items: stretch;
   text-align: left;
