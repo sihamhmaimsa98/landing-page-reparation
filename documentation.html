@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -34,16 +34,12 @@
             <div class="container">
                 <div class="div-introduction">
                     <h1>Présentation</h1>
-                    <p>Chaque année, des millions de téléphones sont remplacés alors qu'une réparation ou un
-                        reconditionnement suffirait à prolonger leur durée de vie. Pourtant, il est souvent difficile de
-                        savoir quelle est la meilleure solution.
+                    <p>
                         Notre application accompagne l'utilisateur en analysant l'état de son téléphone (composants,
                         performances et état général), puis compare trois solutions : réparer, acheter un téléphone
                         reconditionné ou un téléphone neuf.
                         Chaque option présente son coût, ses avantages et son impact environnemental afin d'aider
                         l'utilisateur à faire un choix éclairé.
-                        Pulse a pour objectif d'analyser rapidement un téléphone, de comparer les solutions disponibles
-                        et de promouvoir une consommation plus responsable en réduisant les déchets électroniques.
                     </p>
                 </div>
 
@@ -125,7 +121,8 @@
                 réparation serait souvent suffisante.
                 Ce comportement est principalement dû au manque d'informations : coût de la réparation, intérêt du
                 reconditionné ou choix le plus économique.
-                Pulse centralise toutes ces informations afin d'aider chacun à prendre une décision plus responsable.
+                RepairFirst centralise toutes ces informations afin d'aider chacun à prendre une décision plus
+                responsable.
             </p>
         </div>
     </section>
@@ -159,13 +156,16 @@
                 <div class="etape">
                     <div class="etape-nombre">3</div>
                     <div class="etape-content">
-                        <h3>Comparer</h3>
+                        <h3>Solutionner</h3>
                         <p>L'application compare trois solutions : réparer, acheter un téléphone reconditionné ou un
                             téléphone neuf. Chaque option présente son coût et son impact environnemental.</p>
                     </div>
                 </div>
-                <img src="assets/recommandationssvg.svg" alt="" class="etape-image">
+                <img src="assets/solutionner.svg" alt="" class="etape-image">
             </div>
+
+            <h2>Voici le parcours utilisateur</h2>
+            <img src="assets/userflowsvg.svg" alt="" class="parcours-image">
         </div>
     </section>
 
@@ -173,7 +173,8 @@
         <div class="container">
             <h2>Technologies</h2>
             <p>Le fonctionnement de notre application s'appuie sur plusieurs technologies permettant d'assurer l'analyse
-                du smartphone, le traitement des données et la comparaison des différentes solutions. L'ensemble de ces technologies permet de proposer une application fiable, sécurisée et capable
+                du smartphone, le traitement des données et la comparaison des différentes solutions. L'ensemble de ces
+                technologies permet de proposer une application fiable, sécurisée et capable
                 d'accompagner l'utilisateur dans le choix de la solution la plus adaptée à son smartphone.</p>
             <div class="">
                 <div class="card">
@@ -228,28 +229,358 @@
             </div>
     </section>
 
-    <section id="problematique" class="section-padding">
+    <!-- alors desole mais comme il rester 2h et que cette section n'a pas ete explorer mais qu'on dois finalement la mettre je me suis aide de l'ia -->
+
+    <section id="evolutions" class="section-padding ">
         <div class="container">
-            <h2 class="technologie-title-div">Les évolutions possibles</h2>
-            <p class="technologie-p-div">estimation du prix de reprise ;
-                suivi de la batterie ;
-                historique des analyses ;
-                prise de rendez-vous chez les réparateurs ;
-                suivi des réparations ;
-                programme de fidélité ;
-                compatibilité avec les tablettes et ordinateurs.</p>
+            <h2>Et ensuite ?</h2>
+            <p class="sous-titre">Le projet est pensé pour évoluer — voici la direction.</p>
+
+            <div class="div-evolutions">
+
+                <!-- GROS BLOQUE POUR FLEX -->
+
+
+
+                <div>
+                    <h3 class="titre-bloc">✨ Fonctionnalités à venir</h3>
+                    <div class="accordeon">
+
+                        <div class="accordeon-item">
+                            <div class="accordeon-header">
+                                <div class="accordeon-header-gauche">
+                                    <div class="emoji-feature">🤝</div>
+                                    <span class="titre-feature">Don de l'appareil</span>
+                                </div>
+                                <span class="chevron">▼</span>
+                            </div>
+                            <div class="accordeon-body">
+                                <p>Si l'utilisateur décide de racheter un nouveau téléphone, l'app l'oriente vers
+                                    des
+                                    solutions de don — Emmaüs, associations locales — pour éviter que l'ancien
+                                    appareil
+                                    finisse dans un tiroir.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordeon-item">
+                            <div class="accordeon-header">
+                                <div class="accordeon-header-gauche">
+                                    <div class="emoji-feature">💰</div>
+                                    <span class="titre-feature">Estimation du prix de reprise</span>
+                                </div>
+                                <span class="chevron">▼</span>
+                            </div>
+                            <div class="accordeon-body">
+                                <p>Avant de décider, l'utilisateur peut estimer ce que vaut son appareil en reprise
+                                    sur
+                                    Back Market ou en échange en magasin, pour mieux comparer avec le coût d'une
+                                    réparation.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordeon-item">
+                            <div class="accordeon-header">
+                                <div class="accordeon-header-gauche">
+                                    <div class="emoji-feature">🔋</div>
+                                    <span class="titre-feature">Suivi de la batterie</span>
+                                </div>
+                                <span class="chevron">▼</span>
+                            </div>
+                            <div class="accordeon-body">
+                                <p>Un suivi régulier de l'état de la batterie avec alertes quand le niveau d'usure
+                                    atteint un seuil critique, pour anticiper le remplacement avant la panne.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordeon-item">
+                            <div class="accordeon-header">
+                                <div class="accordeon-header-gauche">
+                                    <div class="emoji-feature">📋</div>
+                                    <span class="titre-feature">Historique des analyses</span>
+                                </div>
+                                <span class="chevron">▼</span>
+                            </div>
+                            <div class="accordeon-body">
+                                <p>Retrouver toutes les analyses passées de son appareil pour suivre son évolution
+                                    dans
+                                    le temps et comparer les résultats entre deux diagnostics.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordeon-item">
+                            <div class="accordeon-header">
+                                <div class="accordeon-header-gauche">
+                                    <div class="emoji-feature">📅</div>
+                                    <span class="titre-feature">Prise de rendez-vous chez les réparateurs</span>
+                                </div>
+                                <span class="chevron">▼</span>
+                            </div>
+                            <div class="accordeon-body">
+                                <p>Directement depuis l'app, l'utilisateur choisit un réparateur partenaire proche
+                                    de
+                                    chez lui et réserve un créneau sans avoir à appeler ou se déplacer.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordeon-item">
+                            <div class="accordeon-header">
+                                <div class="accordeon-header-gauche">
+                                    <div class="emoji-feature">🔧</div>
+                                    <span class="titre-feature">Suivi des réparations</span>
+                                </div>
+                                <span class="chevron">▼</span>
+                            </div>
+                            <div class="accordeon-body">
+                                <p>Un statut en temps réel de la réparation en cours : déposé, en cours de
+                                    diagnostic,
+                                    pièce commandée, prêt à récupérer. Comme un suivi de colis, mais pour son
+                                    téléphone.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="accordeon-item">
+                            <div class="accordeon-header">
+                                <div class="accordeon-header-gauche">
+                                    <div class="emoji-feature">⭐</div>
+                                    <span class="titre-feature">Programme de fidélité</span>
+                                </div>
+                                <span class="chevron">▼</span>
+                            </div>
+                            <div class="accordeon-body">
+                                <p>Chaque réparation ou don d'appareil rapporte des points convertibles en réduction
+                                    chez les réparateurs partenaires. Réparer devient aussi une décision
+                                    économiquement
+                                    avantageuse.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordeon-item">
+                            <div class="accordeon-header">
+                                <div class="accordeon-header-gauche">
+                                    <div class="emoji-feature">💻</div>
+                                    <span class="titre-feature">Compatibilité tablettes & ordinateurs</span>
+                                </div>
+                                <span class="chevron">▼</span>
+                            </div>
+                            <div class="accordeon-body">
+                                <p>Étendre le diagnostic et le comparateur à d'autres appareils numériques :
+                                    tablettes,
+                                    ordinateurs portables, consoles — pour couvrir l'ensemble des équipements du
+                                    foyer.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div>
+                    <h3 class="titre-bloc">🧪 Tests utilisateurs</h3>
+                    <div class="grille-tests">
+                        <div class="card-test">
+                            <span class="tag-test tag-fait">Réalisé</span>
+                            <p class="nom-test">Test de compréhension du parcours</p>
+                            <p class="desc-test">5 personnes ont navigué sur la maquette. Le bouton "Analyser" n'était
+                                pas assez visible — repositionné en hero suite au retour.</p>
+                            <span class="badge-test vert">✓ Correctif appliqué</span>
+                        </div>
+                        <div class="card-test">
+                            <span class="tag-test tag-fait">Réalisé</span>
+                            <p class="nom-test">Lisibilité du comparatif</p>
+                            <p class="desc-test">Les 3 options côte à côte ont été testées. Retour : les utilisateurs
+                                voulaient plus de détails sur le prix de chaque option.</p>
+                            <span class="badge-test vert">✓ Amélioration notée</span>
+                        </div>
+                        <div class="card-test">
+                            <span class="tag-test tag-planifie">Planifié</span>
+                            <p class="nom-test">Test A/B sur l'onboarding</p>
+                            <p class="desc-test">Tester deux introductions : une courte (1 écran) vs une guidée (3
+                                étapes) pour mesurer laquelle amène le mieux au diagnostic.</p>
+                            <span class="badge-test gris">⏳ Automne 2025</span>
+                        </div>
+                        <div class="card-test">
+                            <span class="tag-test tag-planifie">Planifié</span>
+                            <p class="nom-test">Entretiens experts réparateurs</p>
+                            <p class="desc-test">Interviewer 3 à 5 réparateurs professionnels pour valider les critères
+                                de comparaison utilisés dans l'application.</p>
+                            <span class="badge-test gris">⏳ Hiver 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="titre-bloc">🗺️ Roadmap</h3>
+                    <div class="roadmap">
+
+                        <div class="etape-roadmap">
+                            <div class="etape-gauche">
+                                <div class="cercle">1</div>
+                                <div class="ligne-verticale"></div>
+                            </div>
+                            <div class="etape-droite">
+                                <p class="periode">Phase actuelle — 2025</p>
+                                <p class="titre-etape">Landing page & maquette fonctionnelle</p>
+                                <p class="desc-etape">Conception de l'identité visuelle, présentation du concept, mise
+                                    en place des partenariats et première version de la page web.</p>
+                                <span class="badge-etape vert">✓ En cours</span>
+                            </div>
+                        </div>
+
+                        <div class="etape-roadmap">
+                            <div class="etape-gauche">
+                                <div class="cercle gris">2</div>
+                                <div class="ligne-verticale"></div>
+                            </div>
+                            <div class="etape-droite">
+                                <p class="periode grise">Automne 2025</p>
+                                <p class="titre-etape">Prototype interactif & tests utilisateurs</p>
+                                <p class="desc-etape">Développement d'un prototype cliquable du parcours de diagnostic,
+                                    tests A/B sur l'onboarding, collecte des retours terrain.</p>
+                                <span class="badge-etape gris">⏳ Prévu</span>
+                            </div>
+                        </div>
+
+                        <div class="etape-roadmap">
+                            <div class="etape-gauche">
+                                <div class="cercle gris">3</div>
+                                <div class="ligne-verticale"></div>
+                            </div>
+                            <div class="etape-droite">
+                                <p class="periode grise">Début 2026</p>
+                                <p class="titre-etape">Version bêta de l'application mobile</p>
+                                <p class="desc-etape">Lancement iOS & Android avec le diagnostic de base, la comparaison
+                                    des 3 options, la prise de rendez-vous et le suivi des réparations.</p>
+                                <span class="badge-etape gris">⏳ Prévu</span>
+                            </div>
+                        </div>
+
+                        <div class="etape-roadmap">
+                            <div class="etape-gauche">
+                                <div class="cercle gris">4</div>
+                            </div>
+                            <div class="etape-droite">
+                                <p class="periode grise">2026 et au-delà</p>
+                                <p class="titre-etape">Programme de fidélité & extension aux autres appareils</p>
+                                <p class="desc-etape">Ajout du programme de fidélité, estimation de reprise, suivi
+                                    batterie, don d'appareils et extension aux tablettes et ordinateurs.</p>
+                                <span class="badge-etape gris">⏳ Vision long terme</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <section class="section-padding">
-        <!-- <div class="container">
-        <p>Notre projet s'inspire des principes de l'économie circulaire ainsi que des plateformes de réparation et de reconditionnement.
-            En étudiant les solutions existantes et les habitudes des utilisateurs, nous avons conçu une application simple qui aide chacun à faire un choix plus économique, plus durable et plus responsable
-        </p>
 
-        </div> -->
+    <!-- Section références -->
+    <section id="references" class="section-padding">
+        <div class="container">
+            <h2>Références & Inspiration</h2>
+
+            <div class="div-references">
+
+                <!-- Bloc 1 : Projets similaires -->
+                <div class="bloc-reference">
+                    <h3 class="titre-ref">🔍 Projets & produits analysés</h3>
+                    <div class="liste-ref">
+                        <div class="card-ref">
+                            <span class="tag-ref">Application</span>
+                            <p class="nom-ref">iFixit App</p>
+                            <p class="desc-ref">Diagnostic de batterie, tutoriels de réparation étape par étape et
+                                assistant IA (Fixbot). Notre principale inspiration pour la partie diagnostic.</p>
+                            <a class="lien-ref" href="https://fr.ifixit.com" target="_blank">Voir le site →</a>
+                        </div>
+                        <div class="card-ref">
+                            <span class="tag-ref">Marketplace</span>
+                            <p class="nom-ref">Back Market</p>
+                            <p class="desc-ref">Leader mondial du reconditionné, vendu dans 17 pays. Nous nous en sommes
+                                inspirés pour la partie comparaison et recommandation d'appareils.</p>
+                            <a class="lien-ref" href="https://www.backmarket.fr" target="_blank">Voir le site →</a>
+                        </div>
+                        <div class="card-ref">
+                            <span class="tag-ref">Partenariat</span>
+                            <p class="nom-ref">Back Market × iFixit</p>
+                            <p class="desc-ref">Leur collaboration pour unir réparation et reconditionnement nous a
+                                inspiré le concept de RepairFirst : une seule app pour toutes les options.</p>
+                            <a class="lien-ref" href="https://fr.ifixit.com/reparation-back-market-fr"
+                                target="_blank">Voir le partenariat →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloc 2 : Études & articles -->
+                <div class="bloc-reference">
+                    <h3 class="titre-ref">📄 Études & recherches documentaires</h3>
+                    <div class="liste-ref">
+                        <div class="card-ref">
+                            <span class="tag-ref">Étude officielle</span>
+                            <p class="nom-ref">ADEME & ARCEP — Impact environnemental du numérique (2022)</p>
+                            <p class="desc-ref">Les terminaux sont responsables de 60 à 90 % de l'empreinte numérique en
+                                France. La fabrication est l'étape la plus polluante. Source de nos chiffres clés.</p>
+                            <a class="lien-ref"
+                                href="https://librairie.ademe.fr/economie-circulaire-et-dechets/5241-evaluation-de-l-impact-environnemental-d-un-ensemble-de-produits-reconditionnes.html"
+                                target="_blank">Lire l'étude →</a>
+                        </div>
+                        <div class="card-ref">
+                            <span class="tag-ref">Baromètre 2023</span>
+                            <p class="nom-ref">Keeep, SIRRMIET, INR & HOP — Le reconditionné en entreprise</p>
+                            <p class="desc-ref">32 % des entreprises ayant adopté le reconditionné y consacrent déjà 20
+                                % de leur budget. Confirme l'intérêt croissant pour nos solutions.</p>
+                            <a class="lien-ref"
+                                href="https://www.keeep.eu/blog/actualites-2/les-chiffres-cles-du-numerique-reconditionne-34"
+                                target="_blank">Lire le baromètre →</a>
+                        </div>
+                        <div class="card-ref">
+                            <span class="tag-ref">Loi</span>
+                            <p class="nom-ref">Loi AGEC (2021)</p>
+                            <p class="desc-ref">Oblige les acheteurs publics à consacrer 20 % de leurs achats à des
+                                produits reconditionnés. Indice de réparabilité obligatoire depuis janvier 2021.</p>
+                            <a class="lien-ref"
+                                href="https://csnp.fr/wp-content/uploads/2023/04/Avis-n%C2%B02023-03-du-27-mars-sur-le-developpement-des-filieres-du-reconditionnement-dans-le-numerique.pdf"
+                                target="_blank">En savoir plus →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloc 3 : Retours utilisateurs -->
+                <div class="bloc-reference">
+                    <h3 class="titre-ref">💬 Retours qui ont guidé notre réflexion</h3>
+                    <div class="liste-ref">
+                        <div class="card-ref">
+                            <span class="tag-ref">Constat utilisateur</span>
+                            <p class="nom-ref">"Je ne sais pas si ça vaut le coup de réparer ou d'en racheter un."</p>
+                            <p class="desc-ref">Le problème numéro 1 identifié : les utilisateurs manquent d'un outil
+                                pour comparer les 3 options (réparation, reconditionné, neuf) au même endroit.</p>
+                        </div>
+                        <div class="card-ref">
+                            <span class="tag-ref">Donnée terrain</span>
+                            <p class="nom-ref">Chaque Français change de smartphone tous les 2 à 3 ans</p>
+                            <p class="desc-ref">Source ADEME. Pourtant 80 % de l'impact environnemental est lié à la
+                                fabrication — prolonger la vie de l'appareil est la priorité absolue.</p>
+                        </div>
+                        <div class="card-ref">
+                            <span class="tag-ref">Inspiration expert</span>
+                            <p class="nom-ref">iFixit — Indice de réparabilité</p>
+                            <p class="desc-ref">iFixit note chaque smartphone sur sa facilité de réparation. Cette
+                                approche transparente et pédagogique a directement inspiré notre score comparatif.</p>
+                            <a class="lien-ref" href="https://fr.ifixit.com/reparabilite/indices-smartphone"
+                                target="_blank">Voir les indices →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </section>
 
+    
 </body>
 
 </html>
