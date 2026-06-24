@@ -173,6 +173,7 @@ a {
   background: white;
   border-radius: 10px;
   padding: 16px;
+  border-top: 1px solid #30a46c;
 }
 
 /* boutons */
@@ -202,6 +203,10 @@ a {
   justify-content: space-between;
   position: absolute;
   width: 100%;
+  position: fixed;
+  box-shadow: 0 4px 15px #00000014;
+  z-index: 1;
+  background: white;
 }
 
 .img-logo {
@@ -312,13 +317,13 @@ nav {
 #defilement-partenaires {
   display: flex;
   gap: 35px;
-  width: max-content; 
+  width: max-content;
 }
 
 .img-partenaire {
   height: 65px;
   width: 65px;
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .card-partenaire {
@@ -842,37 +847,45 @@ button {
 }
 
 .accordeon-item {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 10px;
   overflow: hidden;
-  transition: background 0.2s;
-  
 }
 
-.accordeon-item.ouvert {
-  background: rgba(255,255,255,0.18);
+.accordeon-item[open] {
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .accordeon-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 12px;
   padding: 14px 18px;
   cursor: pointer;
-  gap: 1rem;
+  list-style: none; /* enlève la petite flèche par défaut */
 }
 
-.accordeon-header-gauche {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.accordeon-header::-webkit-details-marker {
+  display: none; /* enlève la flèche par défaut sur Chrome/Safari */
+}
+
+.accordeon-header::after {
+  content: "▼";
+  margin-left: auto;
+  color: #b6e8cc;
+  font-size: 14px;
+  transition: transform 0.25s;
+}
+
+.accordeon-item[open] .accordeon-header::after {
+  transform: rotate(180deg);
 }
 
 .emoji-feature {
   font-size: 20px;
   width: 36px;
   height: 36px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -886,36 +899,16 @@ button {
   color: #fff;
 }
 
-.chevron {
-  color: #b6e8cc;
-  font-size: 14px;
-  transition: transform 0.25s;
-  flex-shrink: 0;
-}
-
-.accordeon-item.ouvert .chevron {
-  transform: rotate(180deg);
-}
-
 .accordeon-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 18px;
-}
-
-.accordeon-item.ouvert .accordeon-body {
-  max-height: 200px;
-  padding: 0 18px 16px;
-}
-
-.accordeon-body p {
   font-size: 13px;
   color: #d4f0e2;
   line-height: 1.6;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0;
+  padding: 12px 18px 16px;
 }
+
+
 
 .grille-tests {
   display: flex;
@@ -924,7 +917,7 @@ button {
 }
 
 .card-test {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 10px;
   padding: 16px;
   flex: 1;
@@ -949,7 +942,7 @@ button {
 
 .tag-planifie {
   color: #fff;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .nom-test {
@@ -970,8 +963,13 @@ button {
   margin-top: 4px;
 }
 
-.badge-test.vert { color: #b6e8cc; }
-.badge-test.gris { color: rgba(255,255,255,0.45); }
+.badge-test.vert {
+  color: #b6e8cc;
+}
+
+.badge-test.gris {
+  color: rgba(255, 255, 255, 0.45);
+}
 
 .roadmap {
   display: flex;
@@ -1006,20 +1004,20 @@ button {
 }
 
 .cercle.gris {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
 .ligne-verticale {
   width: 2px;
   flex: 1;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   min-height: 24px;
   margin: 4px 0;
 }
 
 .etape-droite {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 10px;
   padding: 14px 16px;
   margin-bottom: 8px;
@@ -1035,7 +1033,9 @@ button {
   margin-bottom: 4px;
 }
 
-.periode.grise { color: rgba(255,255,255,0.35); }
+.periode.grise {
+  color: rgba(255, 255, 255, 0.35);
+}
 
 .titre-etape {
   font-size: 13px;
@@ -1065,6 +1065,10 @@ button {
 }
 
 .badge-etape.gris {
-  background: rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ensuite{
+  color: white;
 }
